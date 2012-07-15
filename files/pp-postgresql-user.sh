@@ -13,7 +13,7 @@ case "$2" in
   createuser)
     USRNAME="$3"
     USRPWD="$4"
-    psql ${PSQL_OPTS} -c "CREATE USER \"${USRNAME}\" PASSWORD '${USRPWD}'"
+    psql ${PSQL_OPTS} -c "CREATE USER \"${USRNAME}\" ENCRYPTED PASSWORD '${USRPWD}'"
     ;;    
   createusernopwd)
     USRNAME="$3"
